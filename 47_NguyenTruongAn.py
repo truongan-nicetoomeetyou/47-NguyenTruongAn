@@ -36,4 +36,15 @@ def print_student_list():
             print(f" - Ten: {student['ten']}, Nam sinh: {student['nam_sinh']}, Dia chi: {student['dia_chi']}")
 
     
-    
+def search_student(search_name):
+    """
+    Tìm kiếm sinh viên theo tên (không phân biệt hoa thường).
+    """
+    print("--- KET QUA TIM KIEM ---")
+    found = False
+    for student in student_list:
+        if search_name.lower() in student['ten'].lower():
+            print(f" - Ten: {student['ten']}, Nam sinh: {student['nam_sinh']}, Dia chi: {student['dia_chi']}")
+            found = True
+    if not found:
+        print("Khong tim thay sinh vien nao.")
