@@ -23,3 +23,17 @@ def add_student(name, year_of_birth, address):
 
     # In ra thông báo
     print("Da them sinh vien", name, "thanh cong.")
+    
+def print_student_list():
+    """
+    In danh sách tất cả sinh viên.
+    """
+    print("--- DANH SACH SINH VIEN ---")
+    if len(student_list) == 0:
+        print("Danh sach trong.")
+    else:
+        for student in student_list:
+            print(f" - Ten: {student['ten']}, Nam sinh: {student['nam_sinh']}, Dia chi: {student['dia_chi']}")
+
+    
+    
